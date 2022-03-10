@@ -12,9 +12,9 @@ vim.opt.number         = true
 vim.opt.relativenumber = true
 
 -- Indentation
-vim.opt.tabstop     = {{nvim.indent.size}}
-vim.opt.shiftwidth  = {{nvim.indent.size}}
-vim.opt.softtabstop = {{nvim.indent.size}}
+vim.opt.tabstop     = {{ nvim.indent.size }}
+vim.opt.shiftwidth  = {{ nvim.indent.size }}
+vim.opt.softtabstop = {{ nvim.indent.size }}
 vim.opt.expandtab   = true
 vim.opt.smarttab    = true
 vim.opt.autoindent  = true
