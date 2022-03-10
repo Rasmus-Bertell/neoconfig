@@ -1,0 +1,9 @@
+require("packer").startup({
+    {
+        require("plugins.packer"),
+        require("plugins.kanagawa"),
+        require("plugins.heirline"),
+        require("plugins.sidebar"),
+        {"nathom/filetype.nvim"},
+    }
+})
