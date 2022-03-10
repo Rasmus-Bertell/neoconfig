@@ -2,7 +2,7 @@ local function config()
     local sidebar = require("sidebar-nvim")
 
     sidebar.setup({
-        open = true,
+        open = false,
         sections = {
             "buffers",
             "git",
