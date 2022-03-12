@@ -1,9 +1,18 @@
 require("packer").startup({
     {
+        -- Packer self managed
         require("plugins.packer"),
+
+        -- General plugins
+        --require("plugins.filetype"),
+        
+        -- Colorscheme
         require("plugins.kanagawa"),
+
+        -- Statusline
         require("plugins.heirline"),
-        require("plugins.sidebar"),
-        {"nathom/filetype.nvim"},
+
+        -- Sidebar
+        --require("plugins.sidebar"),
     }
 })

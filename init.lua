@@ -17,6 +17,26 @@ vim.opt.smartindent = true
 vim.opt.foldmethod = "syntax"
 vim.g.php_folding  = 2
 
+-- Splitting rightbelow
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+-- Hide info in favor of statusbar
+vim.opt.showcmd  = false
+vim.opt.showmode = false
+
+-- Always show tabline
+-- TODO: Plugin to style tabline
+vim.opt.showtabline = 2
+
+-- Always show sign column so it doesn't shift text
+vim.opt.signcolumn = "yes"
+
+-- Ignore case when searching lowercase
+vim.opt.ignorecase = true
+vim.opt.smartcase  = true
+
+-- Misc
 vim.opt.scrolloff   = 25
 vim.opt.colorcolumn = { 80, 100, 120 }
 
