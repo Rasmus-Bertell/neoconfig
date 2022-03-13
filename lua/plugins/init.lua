@@ -4,7 +4,7 @@ require("packer").startup({
         require("plugins.packer"),
 
         -- General plugins
-        --require("plugins.filetype"),
+        require("plugins.filetype"),
         
         -- Colorscheme
         require("plugins.kanagawa"),
@@ -13,6 +13,6 @@ require("packer").startup({
         require("plugins.heirline"),
 
         -- Sidebar
-        --require("plugins.sidebar"),
+        require("plugins.sidebar"),
     }
 })
