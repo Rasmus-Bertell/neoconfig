@@ -14,5 +14,9 @@ require("packer").startup({
 
         -- Sidebar
         require("plugins.sidebar"),
+
+        -- LSP
+        require("plugins.lsp.config"),
+        require("plugins.lsp.completion"),
     }
 })
