@@ -5,16 +5,19 @@ local function config()
     local Align = { provider = "%=" }
     local Space = { provider = " " }
 
-    local mode       = require("plugins.heirline.mode")
-    local file       = require("plugins.heirline.file.block")
-    local fileType   = require("plugins.heirline.file.type")
-    local fileFormat = require("plugins.heirline.file.format")
-    local ruler      = require("plugins.heirline.file.ruler")
-    local scroll     = require("plugins.heirline.file.scroll")
+    local mode        = require("plugins.heirline.mode")
+    local file        = require("plugins.heirline.file.block")
+    local fileType    = require("plugins.heirline.file.type")
+    local fileFormat  = require("plugins.heirline.file.format")
+    local ruler       = require("plugins.heirline.file.ruler")
+    local scroll      = require("plugins.heirline.file.scroll")
+    local lspActive   = require("plugins.heirline.lsp.active")
+    local gps         = require("plugins.heirline.file.gps")
+    local diagnostics = require("plugins.heirline.diagnostics")
 
     Left   = utils.surround({ "", "" }, kanagawa.waveBlue1, { mode })
-    Middle = utils.surround({ "", "" }, kanagawa.waveBlue1, { file })
-    Right  = { fileType, Space, fileFormat, Space, ruler, Space, scroll }
+    Middle = utils.surround({ "", "" }, kanagawa.waveBlue1, { file, Space, gps })
+    Right  = { lspActive, Space, fileType, Space, diagnostics, Space, fileFormat, Space, ruler, Space, scroll }
 
     require("heirline").setup({ Left, Align, Middle, Align, Right });
 end
