@@ -21,9 +21,32 @@ end
 
 return {
     "rebelot/heirline.nvim",
+    config   = config,
     requires = {
         require("plugins.kanagawa"),
         { "kyazdani42/nvim-web-devicons" },
+        { "nvim-lua/lsp-status.nvim" },
+        {
+            "j-hui/fidget.nvim",
+            config = function()
+                require("fidget").setup{}
+            end,
+            requires = {
+                { "nvim-lua/lsp-status.nvim" },
+            }
+        },
+        {
+            "nvim-treesitter/nvim-treesitter",
+            run = ":TSUpdate"
+        },
+        {
+            "SmiteshP/nvim-gps",
+            config   = function()
+                require("nvim-gps").setup()
+            end,
+            requires = {
+                { "nvim-treesitter/nvim-treesitter" },
+            },
+        },
     },
-    config = config
 }

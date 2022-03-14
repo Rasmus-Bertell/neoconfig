@@ -9,7 +9,6 @@ end
 
 return {
     "neovim/nvim-lspconfig",
-    config   = config,
     requires = {
         {
             "williamboman/nvim-lsp-installer",

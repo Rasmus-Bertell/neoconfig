@@ -5,7 +5,7 @@ require("packer").startup({
 
         -- General plugins
         require("plugins.filetype"),
-        
+
         -- Colorscheme
         require("plugins.kanagawa"),
 
