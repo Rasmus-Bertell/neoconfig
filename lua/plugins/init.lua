@@ -18,5 +18,8 @@ require("packer").startup({
         -- LSP
         require("plugins.lsp.config"),
         require("plugins.lsp.completion"),
+
+        -- Filetype Detection
+        { "sheerun/vim-polyglot" },
     }
 })

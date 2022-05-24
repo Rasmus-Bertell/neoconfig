@@ -28,6 +28,7 @@ vim.opt.showmode = false
 -- Always show tabline
 -- TODO: Plugin to style tabline
 vim.opt.showtabline = 2
+vim.opt.laststatus  = 3
 
 -- Always show sign column so it doesn't shift text
 vim.opt.signcolumn = "yes"
@@ -41,3 +42,8 @@ vim.opt.scrolloff   = 25
 vim.opt.colorcolumn = { 80, 100, 120 }
 
 require("plugins")
+
+-- nnoremap <Leader>w :lua require'telescope.builtin'.grep_string(require('telescope.themes').get_dropdown({}))<cr>
+-- nnoremap <Leader>ff :lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>
+-- nnoremap <Leader>fg :lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>
+-- nnoremap <Leader>fb :lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>
