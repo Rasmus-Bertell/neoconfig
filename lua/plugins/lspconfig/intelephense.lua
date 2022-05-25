@@ -6,7 +6,7 @@ local init_options = {
 }
 
 local telemetry = {
-        enabled = false,
+        enabled = {{default.telemetry.enable}},
 }
 
 local settings = {

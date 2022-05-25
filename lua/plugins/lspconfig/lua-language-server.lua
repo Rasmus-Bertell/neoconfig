@@ -5,12 +5,10 @@ local runtime = {
         version = "LuaJIT",
 }
 
--- TODO: Enable vim-global only when editing nvim configs
 local diagnostics = {
         globals = { "vim" },
 }
 
--- TODO: Enable library path only when editing nvim configs
 local workspace = {
         library = vim.api.nvim_get_runtime_file("", true),
 }
@@ -20,7 +18,7 @@ local format = {
 }
 
 local telemetry = {
-        enable = false,
+        enable = {{default.telemetry.enable}},
 }
 
 local settings = {
