@@ -19,5 +19,5 @@ return {
         return " [" .. table.concat(names, " ") .. "]"
     end,
 
-    hl = { fg = kanagawa.springGreen, style = "bold" },
+    hl = { fg = kanagawa.springGreen, bold = true },
 }

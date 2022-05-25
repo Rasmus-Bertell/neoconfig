@@ -83,7 +83,7 @@ local function provider(self)
 end
 
 local function highlight(self)
-    return { fg = self.colors[self.mode], style = "bold", }
+    return { fg = self.colors[self.mode], bold = true, }
 end
 
 return {

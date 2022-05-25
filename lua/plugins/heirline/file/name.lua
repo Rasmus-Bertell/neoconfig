@@ -23,7 +23,7 @@ return {
 
     hl = function()
         if vim.bo.modified then
-            return { fg = kanagawa.springBlue, style = 'bold' }
+            return { fg = kanagawa.springBlue, bold = true }
         end
 
         return { fg = utils.get_highlight("Directory").fg }
