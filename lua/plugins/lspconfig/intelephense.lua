@@ -2,6 +2,7 @@
 -- https://github.com/bmewburn/intelephense-docs/blob/master/installation.md
 
 local init_options = {
+        globalStoragePath = os.getenv("XDG_DATA_HOME") .. "/intelephense",
         licenceKey = "{{default.license.intelephense}}",
 }
 
