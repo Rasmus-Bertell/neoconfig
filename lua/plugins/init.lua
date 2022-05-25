@@ -5,9 +5,7 @@ packer.startup({
                 {
                         "wbthomason/packer.nvim",
                 },
-                {
-                        "neovim/nvim-lspconfig",
-                },
+                require("plugins.lspconfig"),
                 {
                         "nvim-treesitter/nvim-treesitter",
                         run = ":TSUpdate",
@@ -18,10 +16,9 @@ packer.startup({
                 {
                         "lewis6991/gitsigns.nvim",
                 },
-        },
+        }
 })
 
-require("plugins.lspconfig")
 require("nvim-treesitter.configs").setup({})
 require("kanagawa").setup()
 vim.cmd("colorscheme kanagawa")
