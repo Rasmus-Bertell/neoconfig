@@ -43,7 +43,10 @@ vim.opt.colorcolumn = { 80, 100, 120 }
 
 require("plugins")
 
--- nnoremap <Leader>w :lua require'telescope.builtin'.grep_string(require('telescope.themes').get_dropdown({}))<cr>
--- nnoremap <Leader>ff :lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>
--- nnoremap <Leader>fg :lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>
--- nnoremap <Leader>fb :lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({}))<cr>
+-- TODO: Evaluate if these are necessary and move to keybindings.lua
+vim.cmd([[
+nnoremap <Leader>w :lua require'telescope.builtin'.grep_string()<cr>
+nnoremap <Leader>ff :lua require'telescope.builtin'.find_files()<cr>
+nnoremap <Leader>fg :lua require'telescope.builtin'.live_grep()<cr>
+nnoremap <Leader>fb :lua require'telescope.builtin'.buffers()<cr>
+]])

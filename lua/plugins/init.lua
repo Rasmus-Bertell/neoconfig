@@ -21,5 +21,13 @@ require("packer").startup({
 
         -- Filetype Detection
         { "sheerun/vim-polyglot" },
+
+        -- Telescope
+        {
+            "nvim-telescope/telescope.nvim",
+            requires = {
+                {"nvim-lua/plenary.nvim"}
+            }
+        }
     }
 })

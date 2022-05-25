@@ -22,6 +22,7 @@ local function config()
     require("heirline").setup({ Left, Align, Middle, Align, Right });
 end
 
+-- TODO: Refactor components and reevaluate dependencies
 return {
     "rebelot/heirline.nvim",
     config   = config,
