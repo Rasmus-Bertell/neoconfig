@@ -39,3 +39,10 @@ vim.opt.smartcase  = true
 -- Misc
 vim.opt.scrolloff   = 25
 vim.opt.colorcolumn = { 80, 100, 120 }
+
+-- sign({name = "DiagnosticSignError", text = "✘"})
+-- sign({name = "DiagnosticSignWarn",  text = "▲"})
+-- sign({name = "DiagnosticSignHint",  text = "⚑"})
+-- sign({name = "DiagnosticSignInfo",  text = ""})
+
+require("plugins")
