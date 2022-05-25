@@ -40,9 +40,10 @@ vim.opt.smartcase  = true
 vim.opt.scrolloff   = 25
 vim.opt.colorcolumn = { 80, 100, 120 }
 
--- sign({name = "DiagnosticSignError", text = "✘"})
--- sign({name = "DiagnosticSignWarn",  text = "▲"})
--- sign({name = "DiagnosticSignHint",  text = "⚑"})
--- sign({name = "DiagnosticSignInfo",  text = ""})
+-- TODO: Move to proper place with other diagnostics stuff
+vim.fn.sign_define("DiagnosticSignError", { text = "✘", texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn",  { text = "▲", texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignHint",  { text = "⚑", texthl = "DiagnosticSignHint" })
+vim.fn.sign_define("DiagnosticSignInfo",  { text = "", texthl = "DiagnosticSignInfo" })
 
 require("plugins")
