@@ -23,14 +23,16 @@ local telemetry = {
         enable = false,
 }
 
-require("lspconfig").sumneko_lua.setup({
-        settings = {
-                Lua = {
-                        runtime     = runtime,
-                        diagnostics = diagnostics,
-                        workspace   = workspace,
-                        format      = format,
-                        telemetry   = telemetry,
-                },
+local settings = {
+        Lua = {
+                runtime     = runtime,
+                diagnostics = diagnostics,
+                workspace   = workspace,
+                format      = format,
+                telemetry   = telemetry,
         },
+}
+
+require("lspconfig").sumneko_lua.setup({
+        settings = settings,
 })
