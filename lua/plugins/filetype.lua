@@ -1,1 +1,0 @@
-return { "nathom/filetype.nvim" }
