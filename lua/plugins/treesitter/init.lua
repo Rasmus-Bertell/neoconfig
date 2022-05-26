@@ -1,9 +1,15 @@
 local config = function()
         require("nvim-treesitter.configs").setup({
-                ensure_installed      = { "php", "lua", "rust" },
                 highlight             = { enable = true },
                 incremental_selection = { enable = false },
                 indent                = { enable = true },
+                ensure_installed      = {
+                        "bibtex", "c", "cmake", "comment", "cpp", "css",
+                        "dockerfile", "html", "http", "javascript", "json",
+                        "json5", "jsonc", "latex", "ledger", "llvm", "lua",
+                        "make", "markdown", "php", "phpdoc", "python", "query",
+                        "rust", "toml", "typescript", "vim", "yaml",
+                },
         })
 
         vim.opt.foldmethod     = "expr"
