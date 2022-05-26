@@ -13,10 +13,6 @@ vim.opt.softtabstop = {{ default.indent.size }}
 vim.opt.expandtab   = {{ default.indent.spaces }}
 vim.opt.smartindent = true
 
--- Folding
-vim.opt.foldmethod = "syntax"
-vim.g.php_folding  = 2
-
 -- Splitting rightbelow
 vim.opt.splitbelow = true
 vim.opt.splitright = true

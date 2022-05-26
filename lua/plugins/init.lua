@@ -1,25 +1,11 @@
-local packer = require("packer");
+local plugins = {
+        require("plugins.packer"),
+        require("plugins.lspconfig"),
+        require("plugins.treesitter"),
+        require("plugins.kanagawa"),
+        require("plugins.gitsigns"),
+}
 
-packer.startup({
-        {
-                {
-                        "wbthomason/packer.nvim",
-                },
-                require("plugins.lspconfig"),
-                {
-                        "nvim-treesitter/nvim-treesitter",
-                        run = ":TSUpdate",
-                },
-                {
-                        "rebelot/kanagawa.nvim",
-                },
-                {
-                        "lewis6991/gitsigns.nvim",
-                },
-        }
+require("packer").startup({
+        plugins,
 })
-
-require("nvim-treesitter.configs").setup({})
-require("kanagawa").setup()
-vim.cmd("colorscheme kanagawa")
-require("gitsigns").setup()
