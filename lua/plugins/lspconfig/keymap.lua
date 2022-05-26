@@ -1,27 +1,5 @@
-vim.api.nvim_set_keymap(
-        "n",
-        "<space>e",
-        "<cmd>lua vim.diagnostic.open_float()<CR>",
-        { noremap = true, silent = true }
-)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap(
-        "n",
-        "[d",
-        "<cmd>lua vim.diagnostic.goto_prev()<CR>",
-        { noremap = true, silent = true }
-)
-
-vim.api.nvim_set_keymap(
-        "n",
-        "]d",
-        "<cmd>lua vim.diagnostic.goto_next()<CR>",
-        { noremap = true, silent = true }
-)
-
-vim.api.nvim_set_keymap(
-        "n",
-        "<space>q",
-        "<cmd>lua vim.diagnostic.setloclist()<CR>",
-        { noremap = true, silent = true }
-)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { noremap = true, silent = true })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { noremap = true, silent = true })
