@@ -1,4 +1,6 @@
 return function(bufnr)
+        -- TODO: Add descriptions for each key binding so key-menu can display
+        -- them properly
         local gs = package.loaded.gitsigns
 
         local function map(mode, l, r, opts)
