@@ -4,6 +4,7 @@ local plugins = {
         require("plugins.treesitter"),
         require("plugins.kanagawa"),
         require("plugins.gitsigns"),
+        require("plugins.key-menu"),
 }
 
 require("packer").startup({
