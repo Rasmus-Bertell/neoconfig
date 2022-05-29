@@ -1,33 +1,12 @@
-require("packer").startup({
-    {
-        -- Packer self managed
+local plugins = {
         require("plugins.packer"),
-
-        -- General plugins
-        require("plugins.filetype"),
-
-        -- Colorscheme
+        require("plugins.lspconfig"),
+        require("plugins.treesitter"),
         require("plugins.kanagawa"),
+        require("plugins.gitsigns"),
+        require("plugins.key-menu"),
+}
 
-        -- Statusline
-        require("plugins.heirline"),
-
-        -- Sidebar
-        require("plugins.sidebar"),
-
-        -- LSP
-        require("plugins.lsp.config"),
-        require("plugins.lsp.completion"),
-
-        -- Filetype Detection
-        { "sheerun/vim-polyglot" },
-
-        -- Telescope
-        {
-            "nvim-telescope/telescope.nvim",
-            requires = {
-                {"nvim-lua/plenary.nvim"}
-            }
-        }
-    }
+require("packer").startup({
+        plugins,
 })
